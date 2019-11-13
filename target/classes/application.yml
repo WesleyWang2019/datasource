@@ -1,0 +1,46 @@
+# 公用配置,profiles.active对应配置文件优先
+#spring.profiles.active=jdbc,develop
+server:
+  port: 8088
+#server.port=29092
+
+#logging.level.root = INFO
+
+#修改数据源为druid
+#spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
+
+spring:
+  #数据源
+  datasource:
+    #连接池的类型
+    type: com.alibaba.druid.pool.DruidDataSource
+#    type: com.zaxxer.hikari.HikariDataSource
+    #连接驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test01?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&userSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    druid:
+      test01:
+        url: jdbc:mysql://127.0.0.1:3306/test02?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+        username: root
+        password: root
+
+      test02:  #国外2
+        url: jdbc:mysql://127.0.0.1:3306/test03?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+        username: root
+        password: root
+
+      #初始大小
+      initial-size: 1
+      #最大连接数
+      max-active: 100
+      #最最小空闲连接数
+      min-idle: 10
+      #配置获取连接等待超时的时间
+      max-wait: 60000
+      default-auto-commit: true
+      #池的准备好的语句
+      #      pool-prepared-statements: true
+      #每个连接大小的MAX池准备语句
+      max-pool-prepared-statement-per-connection-size: 20

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!-- 驱动包,已放在当前目录 -->
+    <classPathEntry location="mysql-connector-java-5.1.41.jar" />
+    <!-- targetRuntime="MyBatis3Simple" 不生成Example,flat一个表一个实体,其它配置时符合主键会独立生成文件 -->
+    <context id="mysql" defaultModelType="flat">
+        <!-- 生成的Java文件的编码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <!-- 格式化java代码 -->
+        <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"/>
+        <!-- 格式化XML代码 -->
+        <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>
+        
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        
+        <!-- model实现序列化 -->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />  
+        <commentGenerator>
+            <!--  true关闭自动生成的注释(关闭后生成器不能识别已有代码,再次生成会重复)  -->
+            <property name="suppressAllComments" value="false" />
+            <!-- true,添加数据库注释到model -->
+            <property name="addRemarkComments" value="true" />
+            <!--  true关闭注释中的创建时间  -->
+            <property name="suppressDate" value="true" />
+        </commentGenerator>
+        <!-- 必须,配置链接数据库 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" password="jx_wx" userId="jx_wx" connectionURL="jdbc:mysql://192.168.1.171:3306/jx_wx?noAccessToProcedureBodies=true&amp;allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;transformedBitIsBoolean=true&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;autoReconnectForPools=true&amp;maxReconnects=10" />
+        <!-- 必须,数据模型 -->
+        <javaModelGenerator targetPackage="com.trs.jxwx.model.po.generator" targetQOPackage="com.trs.jxwx.model.qo.generator" targetProject="../../src/main/java" />
+        <!-- SQL map生成器，
+              Mybatis3之后,可使用mapper.xml文件+Mapper接口（或者不用mapper接口）,
+                                    或者只使用Mapper接口+Annotation,如果 javaClientGenerator中配置了需要生成XML的话,这个元素就必须配置 -->
+        <sqlMapGenerator targetPackage="com.trs.jxwx.mapper.generator" targetProject="../../src/main/java" />
+
+        <!-- 生成Mapper接口，如果没有配置，不会生成Mapper接口 -->
+        <javaClientGenerator targetPackage="com.trs.jxwx.dao.generator" targetProject="../../src/main/java" type="XMLMAPPER" />
+
+		<!-- <table delimitIdentifiers="true" tableName="monitor_alert_${cfgGroupId}"  domainObjectName="MonitorAlert" >
+            <generatedKey column="alert_id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table delimitIdentifiers="true" tableName="monitor_alert_sens_${cfgGroupId}"  domainObjectName="MonitorAlertSens" >
+            <generatedKey column="alert_sens_id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table delimitIdentifiers="true" tableName="monitor_alert_res_${organId}"  domainObjectName="MonitorAlertRes" >
+            <generatedKey column="alt_res_id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table delimitIdentifiers="true" tableName="monitor_topic_doc"  >
+            <generatedKey column="doc_id" sqlStatement="MySql" identity="true"/>
+        </table> -->
+        <!-- 说明：逆向生成上述三个表的java类时，表名以上述注释中的表名为准，否则会无法对表进行insert、update、delete操作。请注意！ -->
+
+        <table delimitIdentifiers="true" tableName="wx_sur_info">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+    </context>
+</generatorConfiguration>
