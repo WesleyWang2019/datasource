@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 @Configuration
 @MapperScan(basePackages = TheOneConfig.PACKAGE, sqlSessionFactoryRef = "domestic1SqlSessionFactory")
 public class TheOneConfig {
-    static final String PACKAGE = "com.aibank.demo.dao.test01";
+    static final String PACKAGE = "com.datasource.demo.dao.test01";
     static final String MAPPER_LOCATION = "classpath:mapper/test01/*.xml";
 
     @Bean(name = "domestic1DataSource")

@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 @Configuration
 @MapperScan(basePackages = TheTwoConfig.PACKAGE, sqlSessionFactoryRef = "domestic2SqlSessionFactory")
 public class TheTwoConfig {
-    static final String PACKAGE = "com.aibank.demo.dao.test02";
+    static final String PACKAGE = "com.datasource.demo.dao.test02";
     static final String MAPPER_LOCATION = "classpath:mapper/test02/*.xml";
 
     @ConfigurationProperties("spring.datasource.druid.test02")

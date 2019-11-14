@@ -20,7 +20,7 @@ import javax.sql.DataSource;
 @Configuration
 @MapperScan(basePackages = TheMainConfig.PACKAGE, sqlSessionFactoryRef = "abroadSqlSessionFactory")
 public class TheMainConfig {
-    static final String PACKAGE = "com.aibank.demo.dao.testmain";
+    static final String PACKAGE = "com.datasource.demo.dao.testmain";
     static final String MAPPER_LOCATION = "classpath:mapper/testmain/*.xml";
 
     @Value("${spring.datasource.driver-class-name}")
