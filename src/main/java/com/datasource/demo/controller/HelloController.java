@@ -34,6 +34,9 @@ public class HelloController {
 
     @GetMapping("/main")
     public int getMain() {
+        log.debug("logging level debug");
+        log.info("logging level info");
+        log.error("logging level error");
         return helloMainService.getHello();
     }
 
