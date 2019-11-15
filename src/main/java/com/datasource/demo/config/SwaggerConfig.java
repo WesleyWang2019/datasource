@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
-import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -29,13 +28,14 @@ public class SwaggerConfig {
                 .build()
                 .apiInfo(apiInfo());
     }
+
     private ApiInfo apiInfo() {
         return new ApiInfo(
                 "Spring Boot 项目集成 Swagger 实例文档",
                 "swagger测试",
                 "API V1.0",
                 null,
-               null,
+                null,
                 "Apache", "http://www.apache.org/", Collections.emptyList());
     }
 }
