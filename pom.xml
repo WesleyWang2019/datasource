@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wesley.demo</groupId>
-    <artifactId>data-source</artifactId>
+    <artifactId>datasource</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>data-source</name>
+    <name>datasource</name>
     <properties>
         <maven.resources.overwrite>true</maven.resources.overwrite>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -132,6 +132,7 @@
                 <filtering>true</filtering>
                 <targetPath>../assembly-config</targetPath>
                 <includes>
+                    <include>mapper/**/*.xml</include>
                     <include>*.xml</include>
                     <include>*.yml</include>
                     <include>*.properties</include>

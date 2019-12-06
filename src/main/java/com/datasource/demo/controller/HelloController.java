@@ -24,19 +24,9 @@ public class HelloController {
     @Autowired
     private HelloTwoService helloTwoService;
 
-    @GetMapping("/t")
-    public String getHello() {
-        log.debug("logging level debug");
-        log.info("logging level info");
-        log.error("logging level error");
-        return "hello world";
-    }
 
     @GetMapping("/main")
     public int getMain() {
-        log.debug("logging level debug");
-        log.info("logging level info");
-        log.error("logging level error");
         return helloMainService.getHello();
     }
 

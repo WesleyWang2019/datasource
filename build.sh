@@ -81,8 +81,8 @@ echo 'start package env:'${ENV_LIST[0]}
 
 mvn clean  package -P ${ENV_LIST[0]}
 #重命名
-#cd target/
-#mv datasource-${ENV_LIST[0]}.tar ${PACKAGE_NAME}.tar
+cd target/
+mv datasource-${ENV_LIST[0]}.tar ${PACKAGE_NAME}.tar
 
 mkdir config/
 
