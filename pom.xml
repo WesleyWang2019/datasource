@@ -219,6 +219,8 @@
                                 <addClasspath>true</addClasspath>
                                 <!--启动脚本里不需再配置-->
                                 <classpathPrefix>../lib/</classpathPrefix>
+                                <!--去掉版本里的时间戳-->
+                                <useUniqueVersions>false</useUniqueVersions>
                             </manifest>
                             <manifestEntries>
                                 <Class-Path>../config/</Class-Path>
@@ -226,8 +228,7 @@
                         </archive>
                         <includes>
                             <!-- 只打包指定目录的文件 -->
-                            <include>com/datasource/demo/**</include>
-                            <include>mapper/**</include>
+                            <include>com/datasource/**</include>
                         </includes>
                     </configuration>
                 </plugin>
@@ -254,6 +255,22 @@
                             </configuration>
                         </execution>
                     </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <!-- 没有该配置，devtools 不生效 -->
+                        <fork>true</fork>
+                        <layout>ZIP</layout>
+                        <includes>
+                            <!-- 项目启动jar包中排除依赖包 -->
+                            <include>
+                                <groupId>non-exists</groupId>
+                                <artifactId>non-exists</artifactId>
+                            </include>
+                        </includes>
+                    </configuration>
                 </plugin>
 
 
