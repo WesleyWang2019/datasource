@@ -16,6 +16,10 @@ spring:
 #        refreshable-dataids: common.yml
 #      discovery:
 #        server-addr: ${demo.nacos.server-addr}
+
+
+
+
 demo:
   swagger:
     enabled: true

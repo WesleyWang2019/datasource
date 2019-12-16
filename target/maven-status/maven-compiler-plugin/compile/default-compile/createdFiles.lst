@@ -3,10 +3,12 @@ com\datasource\demo\config\TheTwoConfig.class
 com\datasource\demo\config\TheMainConfig.class
 com\datasource\demo\dao\test02\HelloTwoMapper.class
 com\datasource\demo\config\SwaggerConfig.class
+META-INF\spring-configuration-metadata.json
 com\datasource\demo\service\HelloMainService.class
 com\datasource\demo\config\TheOneConfig.class
 com\datasource\demo\dao\test01\HelloOneMapper.class
 com\datasource\demo\service\MultithreadingService.class
+com\datasource\demo\model\People.class
 com\datasource\demo\config\DruidDataSourceBuilder.class
 com\datasource\demo\service\HelloOneService.class
 com\datasource\demo\Application.class

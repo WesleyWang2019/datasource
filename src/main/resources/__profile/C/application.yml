@@ -26,7 +26,7 @@ spring:
         username: root
         password: root
 
-      test02:  #国外2
+      test02:
         url: jdbc:mysql://127.0.0.1:3306/test03?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
         username: root
         password: root
@@ -44,3 +44,5 @@ spring:
       #      pool-prepared-statements: true
       #每个连接大小的MAX池准备语句
       max-pool-prepared-statement-per-connection-size: 20
+
+

@@ -1,0 +1,44 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.datasource.demo.model.People",
+      "name": "nl.test",
+      "type": "com.datasource.demo.model.People"
+    },
+    {
+      "sourceType": "com.datasource.demo.config.TheOneConfig",
+      "name": "spring.datasource.druid.test01",
+      "sourceMethod": "domestic1DataSource()",
+      "type": "javax.sql.DataSource"
+    },
+    {
+      "sourceType": "com.datasource.demo.config.TheTwoConfig",
+      "name": "spring.datasource.druid.test02",
+      "sourceMethod": "domestic2DataSource()",
+      "type": "javax.sql.DataSource"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.datasource.demo.model.People",
+      "name": "nl.test.age",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.datasource.demo.model.People",
+      "name": "nl.test.hobby",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.datasource.demo.model.People",
+      "name": "nl.test.name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.datasource.demo.model.People",
+      "name": "nl.test.sex",
+      "type": "java.lang.Integer"
+    }
+  ]
+}

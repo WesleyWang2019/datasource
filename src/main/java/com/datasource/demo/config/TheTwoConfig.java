@@ -1,5 +1,6 @@
 package com.datasource.demo.config;
 
+import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
@@ -25,7 +26,7 @@ public class TheTwoConfig {
     @ConfigurationProperties("spring.datasource.druid.test02")
     @Bean(name = "domestic2DataSource")
     public DataSource domestic2DataSource() {
-        return com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder.create().build();
+        return DruidDataSourceBuilder.create().build();
     }
 
     @Bean(name = "domestic2TransactionManager")

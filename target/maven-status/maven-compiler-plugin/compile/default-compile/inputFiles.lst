@@ -2,6 +2,7 @@ D:\daily_idea\datasource\src\main\java\com\datasource\demo\controller\HelloContr
 D:\daily_idea\datasource\src\main\java\com\datasource\demo\dao\test01\HelloOneMapper.java
 D:\daily_idea\datasource\src\main\java\com\datasource\demo\dao\test02\HelloTwoMapper.java
 D:\daily_idea\datasource\src\main\java\com\datasource\demo\config\TheMainConfig.java
+D:\daily_idea\datasource\src\main\java\com\datasource\demo\model\People.java
 D:\daily_idea\datasource\src\main\java\com\datasource\demo\service\HelloOneService.java
 D:\daily_idea\datasource\src\main\java\com\datasource\demo\service\MultithreadingService.java
 D:\daily_idea\datasource\src\main\java\com\datasource\demo\Application.java

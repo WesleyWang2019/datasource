@@ -1,10 +1,12 @@
 package com.datasource.demo.controller;
 
+import com.datasource.demo.model.People;
 import com.datasource.demo.service.HelloMainService;
 import com.datasource.demo.service.HelloOneService;
 import com.datasource.demo.service.HelloTwoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,6 +25,8 @@ public class HelloController {
     private HelloOneService helloOneService;
     @Autowired
     private HelloTwoService helloTwoService;
+    @Autowired
+    private People people;
 
 
     @GetMapping("/main")
@@ -38,6 +42,13 @@ public class HelloController {
     @GetMapping("/two")
     public int getTwo() {
         return helloTwoService.getHello();
+    }
+
+
+    @GetMapping("/con")
+    public void testConfig() {
+        People people = this.people;
+        System.out.println(people);
     }
 
 

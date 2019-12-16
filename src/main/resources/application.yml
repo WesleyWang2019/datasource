@@ -51,3 +51,9 @@ spring:
       max-pool-prepared-statement-per-connection-size: 20
 
 
+nl:
+  test:
+    name: yt
+    age: 18
+    sex: 1
+    hobby: hot girl
