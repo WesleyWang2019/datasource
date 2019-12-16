@@ -23,8 +23,8 @@ spring:
     druid:
       test01:
         url: jdbc:mysql://127.0.0.1:3306/test02?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
-        username: root1
-        password: root1
+        username: root
+        password: root
 
       test02:
         url: jdbc:mysql://127.0.0.1:3306/test03?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
