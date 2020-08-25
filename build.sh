@@ -35,7 +35,7 @@ function do_package() {
 
     #更换配置文件
     cp ${ROOT_HOME}/target/classes/__profile/${1}/* ${ROOT_HOME}/target/config/
-    tar uvf ${PACKAGE_NAME}.tar config/
+    tar tvf ${PACKAGE_NAME}.tar config/
 
 #    if [ ${1} = 'production' ]; then
 #     mkdir bin/

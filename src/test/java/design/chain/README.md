@@ -1,0 +1,1 @@
+chain of responsibility责任链模式
